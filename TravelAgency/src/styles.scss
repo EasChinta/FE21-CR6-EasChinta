@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "STIX Two Math", serif;
+}
+
+body {
+  background: url("../src/app/img/IMG_9000.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+    
+  height: 130px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: rgba(198, 191, 191, 0);
+}
+nav {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 60px 0 60px;
+}
+
+nav li {
+  padding-left: 5px;
+}
+
+li a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: large;
+  color: black !important;
+  font-weight: bolder;
+}
+
+nav h2 {
+  margin-left: 5vw;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+#myCart {
+  color: yellow;
+  position: relative;
+  font-size: x-large;
+  top: -1rem;
+  right: -1.3rem;
+  opacity: 0.5;
+}
+
+#cartIcon {
+  font-size: xx-large;
+}
+
+// CONTACT FORM //
+input [type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #1e69803d;
+  padding: 20px;
+}
+
+label {
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+
+
+// HOMEPAGE//
+
+#homeText {
+  font-size: large;
+}

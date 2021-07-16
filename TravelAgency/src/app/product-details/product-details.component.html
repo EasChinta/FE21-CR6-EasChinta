@@ -1,0 +1,30 @@
+<h2 style="margin-top: 10vh; text-align: center">Trip Details</h2>
+
+<div class="container">
+  <div class="row">
+    <div *ngIf="product">
+      <div class="card mb-3">
+        <img src="{{ product.productImage }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">{{ product.productPrice | currency }}</p>
+          <p class="card-text">
+            <small>{{ product.productDetails }} <br></small>
+          </p>
+          <button class="btn btn-outline-primary" (click)="addToCart(product)">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <img src="{{product.productImage}}" alt="">
+    <h3>{{ product.productName }}</h3>
+
+    <h4>{{ product.productPrice | currency }}</h4>
+
+    <p>{{ product.productDetails }}</p>
+
+     <button (click)="addToCart(product)">Buy</button>
+
+</div> -->

@@ -1,0 +1,38 @@
+
+
+<h1 style="text-align: center;">Cart</h1>
+
+
+<table class="table table-transparent table-striped container my-3" >
+  <thead>
+    <tr>
+      <th>Items</th>
+      <th>Price</th>
+      <th>Discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let val of items">
+      <td>{{val.productName}}</td>
+      <td>{{val.productPrice | currency}}</td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>
+        Total Price
+      </th>
+      <th>
+        {{beforeDisc}}
+      </th>
+      <th>
+        {{sum}}
+      </th>
+      
+    </tr>
+  </thead>
+  
+
+</table>
