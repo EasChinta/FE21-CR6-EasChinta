@@ -1,12 +1,13 @@
+<!-- Both the details button and the image are clickable and will take you the details sections.
+The Book now button with add the item to the cart-->
+
 <div class="container">
   <div class="row">
     <div
       *ngFor="let val of products; index as id"
       class="col-lg-3 col-md-6 col-sm-12 my-3 mb-3"
     >
-      <div
-        class="card text-center h-100 "
-      >
+      <div class="card text-center h-100">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
@@ -17,31 +18,29 @@
                 >Details</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" (click)="addToCart(val)" routerLink=""
-                >Book now</a
-              >
-            </li>
           </ul>
         </div>
         <div class="card-body">
           <a routerLink="products/{{ id }}"
-            ><img src="{{ val.productImage }}" style="height: 181px" class="card-img-top" alt="..."
+            ><img
+              src="{{ val.productImage }}"
+              style="height: 181px"
+              class="card-img-top"
+              alt="..."
           /></a>
           <h5 class="card-title">
             {{ val.productName }} <br />
-            {{ val.productPrice | currency }} <br>
-            {{ val.startDate}} <br> Duration: {{val.duration}}
+            {{ val.productPrice }} € <br />
+            {{ val.startDate }} <br />
+            Duration: {{ val.duration }}
           </h5>
         </div>
 
-          <div class="mb-3">
+        <div class="mb-3">
           <a routerLink="" class="btn btn-primary" (click)="addToCart(val)"
             >Book now</a
           >
         </div>
-
-       
       </div>
     </div>
   </div>

@@ -1,9 +1,19 @@
+<!-- Here I created a table that takes in all the information coming from the functions i created in the cart.service.ts. 
+I tried some complicated ways to show the prices with and without the discounts and they would not work as desired. 
 
+Therefore I just made it really simple in the end. 
+When the sum is not above 3k or 5k, it will just show the normal price and if it is above then it shows the price before and the price after.  -->
 
-<h1 style="text-align: center;">Cart</h1>
+<h1 style="text-align: center">Cart</h1>
 
-
-<table class="table table-transparent table-striped container my-3" >
+<br />
+<div class="container">
+  <h5>
+    *With purchaces over 3000 or 5000, you get a 10% or 20% Discount
+    respectively!
+  </h5>
+</div>
+<table class="table table-dark table-striped container my-3">
   <thead>
     <tr>
       <th>Items</th>
@@ -13,26 +23,33 @@
   </thead>
   <tbody>
     <tr *ngFor="let val of items">
-      <td>{{val.productName}}</td>
-      <td>{{val.productPrice | currency}}</td>
-      <td>
-      </td>
+      <td>{{ val.productName }}</td>
+      <td>{{ val.productPrice }} €</td>
+      <td></td>
     </tr>
   </tbody>
   <thead>
     <tr>
-      <th>
-        Total Price
-      </th>
-      <th>
-        {{beforeDisc}}
-      </th>
-      <th>
-        {{sum}}
-      </th>
-      
+      <th>Total Price</th>
+      <th>{{ beforeDisc }} €</th>
+      <th>{{ sum }} €</th>
     </tr>
   </thead>
-  
-
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>
+        <a href="/home">
+          <button
+            class="btn btn-outline-primary"
+            style="color: white"
+            onclick="alert('Thank you for booking with us!')"
+          >
+            Purchase
+          </button></a
+        >
+      </th>
+    </tr>
+  </thead>
 </table>

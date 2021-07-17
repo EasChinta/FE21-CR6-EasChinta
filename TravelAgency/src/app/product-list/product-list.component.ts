@@ -5,18 +5,15 @@ import { CartService } from '../cart.service';
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
+  products = products;
 
-  products = products
-  
-  constructor(private CS: CartService) { }
+  constructor(private CS: CartService) {}
   addToCart(product: any) {
-    alert("This item is added to the cart");
+    alert('This item is added to the cart');
     this.CS.addToCart(product);
   }
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -9,27 +9,33 @@ import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
-    path:"",component: ProductListComponent
+    path: '',
+    component: ProductListComponent,
   },
   {
-    path:"products/:id", component: ProductDetailsComponent
+    path: 'products/:id',
+    component: ProductDetailsComponent,
   },
   {
-    path: "cart", component: CartComponent
+    path: 'cart',
+    component: CartComponent,
   },
   {
-    path: "home", component: HomepageComponent
+    path: 'home',
+    component: HomepageComponent,
   },
   {
-    path: "about", component: AboutComponent
+    path: 'about',
+    component: AboutComponent,
   },
   {
-    path: "contact", component: ContactComponent
-  }
+    path: 'contact',
+    component: ContactComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

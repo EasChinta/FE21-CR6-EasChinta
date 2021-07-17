@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-
-  items : any = [];
+  items: any = [];
   beforeDisc: any = 0;
-  constructor() { }
+  constructor() {}
 
-
-
-  addToCart(product: {name: string, price:number, description:string, image:string}) {
-
+  addToCart(product: {
+    name: string;
+    price: number;
+    description: string;
+    image: string;
+  }) {
     this.items.push(product);
-
   }
 
   total() {
     let total = 0;
     for (let val of this.items) {
-      total = total + val.productPrice
+      total = total + val.productPrice;
     }
     this.beforeDisc = total;
     if (total > 5000) {
@@ -32,18 +32,13 @@ export class CartService {
     }
   }
 
-
   getItems() {
-
     return this.items;
-
   }
 
   clearCart() {
-
     this.items = [];
 
     return this.items;
-
   }
 }
